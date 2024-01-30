@@ -13,10 +13,14 @@ const TableCell = ({ boxRatio, boxNum, color, isStart, isEnd, isTreeNode, isRoot
                     style={{
                         backgroundColor: color,
                     }}>
-                    {!isEnd && <DrawLine color />}
+                    {!isEnd && <DrawLine color={color} type={"line"} boxRatio={boxRatio} />}
 
                     {!isStart ? (
-                        !isTreeNode && <DrawLine type={"bottom-line"} color boxRatio />
+                        isTreeNode ? (
+                            <DrawLine type={"curved-line"} color={color} boxRatio={boxRatio} />
+                        ) : (
+                            <DrawLine type={"bottom-line"} color={color} boxRatio={boxRatio} />
+                        )
                     ) : (
                         <>
                             <div
@@ -24,8 +28,8 @@ const TableCell = ({ boxRatio, boxNum, color, isStart, isEnd, isTreeNode, isRoot
                                 style={{
                                     backgroundColor: color,
                                 }}></div>
-                            <DrawLine type={"curved-line"} color boxRatio />
-                            {isRootNode && <DrawLine type={"horizonntal-line"} color boxRatio />}
+                            <DrawLine type={"curved-line"} color={color} boxRatio={boxRatio} />
+                            {isRootNode && <DrawLine type={"horizontal-line"} color={color} boxRatio={boxRatio} />}
                         </>
                     )}
                 </div>

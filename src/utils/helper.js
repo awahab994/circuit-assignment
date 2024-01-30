@@ -8,16 +8,14 @@ const getRandomColor = () => {
 };
 
 const getSingleStructure = (cabinetTall, cabinetWide, startNumber, numberofCabinets) => {
-
     // Create an array and filled with Zero
 
     let array2D = Array(cabinetTall)
         .fill()
-    .map(() => Array(cabinetWide));
+        .map(() => Array(cabinetWide));
 
     // Get Random Color
     let color = getRandomColor();
-
 
     // Number to generate the  id number of every box
     let number = startNumber;
@@ -56,7 +54,6 @@ const getSingleStructure = (cabinetTall, cabinetWide, startNumber, numberofCabin
                 if (isCabinateGreaterTwo) {
                     // if total cabinates is greater then two we don't need to show any linked or line just square so we can say it is start
                     isStart = true;
-
                 } else {
                     // if the number of cabinets  <= 2
                     if (remainingMaxSocket === 0) {
@@ -76,7 +73,7 @@ const getSingleStructure = (cabinetTall, cabinetWide, startNumber, numberofCabin
                     }
                 }
             }
-// The structure of node that will reflects on UI
+            // The structure of node that will reflects on UI
             array2D[row][col] = {
                 number: number,
                 color: color,
@@ -103,6 +100,8 @@ export const getDataRecursively = (rows, columns, noCabinates, startNumber = 1) 
         return [];
     }
 
+    console.log("Rows :: " + rows + "Col :: " + columns + "No Cabinetes ::" + noCabinates);
+
     let final = [];
 
     // Base case if the  rows become or equal to Number of Cabinets return the list
@@ -120,7 +119,7 @@ export const getDataRecursively = (rows, columns, noCabinates, startNumber = 1) 
 
     // Complete run the cycle untill it's complete
 
-    const remainingArrays = getDataRecursively(rows - currentRows, number);
+    const remainingArrays = getDataRecursively(rows - currentRows, columns, noCabinates, number);
     final = remainingArrays.concat(final);
     return final;
 };
