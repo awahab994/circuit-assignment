@@ -36,3 +36,74 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.line {
+  position: absolute;
+  width: 2px; /* Adjust the width of the line as needed */
+  background-color: red; /* Adjust the color of the line as needed */
+  height: 45%; /* Adjust the height of the line as needed */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-line {
+  position: absolute;
+  width: 2px; /* Adjust the width of the line as needed */
+  background-color: red; /* Adjust the color of the line as needed */
+  height: 45%; /* Adjust the height of the line as needed */
+  top: 56%;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.curve-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid grey; /* Adjust the color of the arrowhead as needed */
+  transform: translateX(-50%);
+}
+
+.bottom-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid grey; /* Adjust the color of the arrowhead as needed */
+  transform: translateX(-50%);
+}
+
+.square {
+  width: 15px;
+  height: 15px;
+  background-color: #999;
+  position: absolute;
+  bottom: 0; /* Adjust the top position as needed */
+  left: 10%;
+  top: 90%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.curve-line {
+  width: 55px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  border: solid 2px #000;
+  border-color: transparent #999 #999 transparent;
+  border-radius: 0px 10px 50px 0px;
+}
