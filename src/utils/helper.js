@@ -100,8 +100,6 @@ export const getDataRecursively = (rows, columns, noCabinates, startNumber = 1) 
         return [];
     }
 
-    console.log("Rows :: " + rows + "Col :: " + columns + "No Cabinetes ::" + noCabinates);
-
     let final = [];
 
     // Base case if the  rows become or equal to Number of Cabinets return the list

@@ -1,9 +1,9 @@
 
 .line {
   position: absolute;
-  width: 2px; /* Adjust the width of the line as needed */
-  background-color: red; /* Adjust the color of the line as needed */
-  height: 45%; /* Adjust the height of the line as needed */
+  width: 2px; 
+  background-color: red; 
+  height: 45%; 
   top: 0;
   bottom: 0;
   left: 50%;
@@ -12,9 +12,9 @@
 
 .bottom-line {
   position: absolute;
-  width: 2px; /* Adjust the width of the line as needed */
-  background-color: red; /* Adjust the color of the line as needed */
-  height: 45%; /* Adjust the height of the line as needed */
+  width: 2px; 
+  background-color: red; 
+  height: 45%; 
   top: 56%;
   bottom: -10px;
   left: 50%;
@@ -30,7 +30,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 10px solid grey; /* Adjust the color of the arrowhead as needed */
+  border-bottom: 10px solid grey; 
   transform: translateX(-50%);
 }
 
@@ -43,7 +43,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 10px solid grey; /* Adjust the color of the arrowhead as needed */
+  border-bottom: 10px solid grey; 
   transform: translateX(-50%);
 }
 
@@ -52,7 +52,7 @@
   height: 15px;
   background-color: #999;
   position: absolute;
-  bottom: 0; /* Adjust the top position as needed */
+  bottom: 0;
   left: 10%;
   top: 90%;
   transform: translateX(-50%) translateY(-50%);
@@ -69,9 +69,9 @@
 }
 
 .horizontal-line {
-  width: 100%; /* Adjust the width of the line as needed */
-  height: 2px; /* Adjust the height of the line as needed */
-  background-color: black; /* Adjust the color of the line as needed */
+  width: 100%; 
+  height: 2px; 
+  background-color: black; 
   position: absolute;
   top: 97%;
   left: 4px;
